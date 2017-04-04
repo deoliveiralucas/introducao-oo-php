@@ -54,13 +54,6 @@ class Pessoa
     }
 }
 
-// Criando uma instancia de pessoa
-$lucas = new Pessoa('Lucas', 22, '12345678');
-echo $lucas->nome . PHP_EOL;
-// echo $lucas->idade; // erro ao tentar acessar atributo protegido 
-// echo $lucas->cpf; // erro ao tentar acessar atributo privado
-$lucas->qualSuaIdade();
-
 class Funcionario extends Pessoa
 {
 
@@ -84,7 +77,7 @@ class Funcionario extends Pessoa
 
     public function qualSeuSalario()
     {
-        echo 'Meu salário é: ' . $this->salario;
+        echo 'Meu salário é: ' . $this->salario . PHP_EOL;
     } 
 }
 
@@ -95,6 +88,8 @@ echo $lucas->nome . PHP_EOL;
 // echo $lucas->cpf; // erro ao tentar acessar atributo privado
 $lucas->qualSuaIdade();
 // $lucas->qualSeuSalario(); // erro: método não existe na classe pessoa
+
+// --------------------------------------------------------
 
 // Criando uma instancia de funcionario
 $zidane = new Funcionario('Zidane', 45, '765433211', 50000);
