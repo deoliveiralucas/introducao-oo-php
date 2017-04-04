@@ -1,12 +1,10 @@
 <?php
 
 /**
- * Introdução a Orientação a Objetos com PHP
- * Exemplo didatico de classes, atributos e métodos
+ * Classe Pessoa
  * 
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
  */
-
 class Pessoa 
 {
 
@@ -46,10 +44,24 @@ class Pessoa
     }
 
     /**
-     * Método público imprime a idade
+     * Método público retorna a idade
      */
-    public function qualSuaIdade()
+    public function obterIdade()
     {
-        echo 'Minha idade é: ' . $this->idade . PHP_EOL;
+        return $this->idade;
+    }
+
+    /**
+     * Método imprime informações da Pessoa
+     */
+    public function imprimirDados()
+    {
+        printf(
+            '%s tem %s anos seu cpf é %s %s', 
+            $this->nome, 
+            $this->idade, 
+            $this->cpf,
+            PHP_EOL
+        );
     }
 }

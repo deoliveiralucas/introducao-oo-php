@@ -1,6 +1,8 @@
 <?php
 
-/** 
+/**
+ * Classe Funcionario
+ *  
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
  */
 class Funcionario extends Pessoa
@@ -19,12 +21,16 @@ class Funcionario extends Pessoa
      */
     public function __construct($nome, $idade, $cpf, $salario)
     {
+        // atribui valor ao atributo da classe
         $this->salario = $salario;
         // chama construtor da classe pai (Pessoa)
         parent::__construct($nome, $idade, $cpf);
     }
 
-    public function qualSeuSalario()
+    /**
+     * Método público para imprimir o salário
+     */
+    public function obterSalario()
     {
         echo 'Meu salário é: ' . $this->salario . PHP_EOL;
     } 
