@@ -1,5 +1,9 @@
 <?php
 
+namespace Unisal\Cliente\Repositorio;
+
+use Unisal\Cliente\Entidade\Cliente;
+
 /**
  * Classe cliente repositório
  * Gerencia dados do cliente em sessão
@@ -30,7 +34,7 @@ class ClienteRepositorioSessao implements ClienteRepositorioInterface
         } 
 
         $novaListaClientes[] = serialize($novoCliente);
-        $_SESSION['clientes'] = serialize($novaListaClientes);
+        $_SESSION['listaClientes'] = serialize($novaListaClientes);
 
         return $novoCliente;
     }
@@ -39,13 +43,14 @@ class ClienteRepositorioSessao implements ClienteRepositorioInterface
      * @return array
      */
     public function consultar()
-    {
-        $arrClientes = [];
-        $clientes = [];        
-        if (isset($_SESSION['clientes'])) {
-            $clientes = unserialize($_SESSION['clientes']);
+    {        
+        if (! isset($_SESSION['listaClientes'])) {
+            return [];
         }
-
+        
+        $arrClientes = [];
+        $clientes = [];  
+        $clientes = unserialize($_SESSION['listaClientes']);
         foreach ($clientes as $cliente) {
             $arrClientes[] = unserialize($cliente);
         }

@@ -1,5 +1,9 @@
 <?php
 
+namespace Unisal\Cliente\Repositorio;
+
+use Unisal\Cliente\Entidade\Cliente;
+
 /**
  * Classe cliente repositório
  * Gerencia dados do cliente em arquivo texto
@@ -13,7 +17,7 @@ class ClienteRepositorioTexto implements ClienteRepositorioInterface
 
     public function __construct()
     {
-        $this->caminhoArquivo = 'clientes.txt';
+        $this->caminhoArquivo = __DIR__ . '/../../../../dados/clientes.txt';
     }
 
     /**
@@ -52,7 +56,6 @@ class ClienteRepositorioTexto implements ClienteRepositorioInterface
             $clientes[] = $this->converterLinhaDoArquivoParaCliente($linha);
         }
         fclose($arquivo);
-        
         return $clientes;
     }
 

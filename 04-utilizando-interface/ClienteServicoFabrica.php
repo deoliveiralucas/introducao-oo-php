@@ -5,7 +5,7 @@ class ClienteServicoFabrica
 
     public static function create()
     {
-        $repositorio = new ClienteRepositorioSessao();
+        $repositorio = new ClienteRepositorioTexto();
         return new ClienteServico($repositorio);
     }
 }
