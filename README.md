@@ -3,4 +3,4 @@ Minicurso FLISoL 2017
 
 ## Todo
 
-[ ] - Utilizar PHP7
+- [ ] Utilizar PHP7
