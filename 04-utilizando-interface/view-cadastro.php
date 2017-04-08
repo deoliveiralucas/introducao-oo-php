@@ -7,8 +7,6 @@ require_once 'ClienteRepositorioSessao.php';
 require_once 'ClienteServico.php';
 require_once 'ClienteServicoFabrica.php';
 
-// Verifica se existe uma requisição POST
-// caso exista, pega os dados e grava
 
 $dadosGravados = false;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

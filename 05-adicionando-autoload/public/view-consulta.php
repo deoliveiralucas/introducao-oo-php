@@ -4,9 +4,6 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use Unisal\Cliente\Fabrica\ClienteServicoFabrica;
 
-// Verifica se existe uma requisição POST
-// caso exista, pega os dados e grava
-
 $clienteServico = ClienteServicoFabrica::create();
 $clientes = $clienteServico->consultar();
 ?>

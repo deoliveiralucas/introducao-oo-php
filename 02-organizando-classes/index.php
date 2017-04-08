@@ -2,7 +2,7 @@
 
 // FLISoL 2017
 // Introdução a Orientação a Objetos com PHP
-// Exemplo adicionando as classes em arquivos separados
+// Exemplo gravando em arquivo texto
 
 require_once 'Pessoa.php';
 require_once 'Funcionario.php';
@@ -24,6 +24,6 @@ $zidane = new Funcionario('Zidane', 45, '765433211', 50000);
 // acesso direto ao atributo público da classe Pessoa
 echo $zidane->nome . PHP_EOL;
 // acesso ao método público da classe Pessoa
-$zidane->obterIdade();
+echo $zidane->obterIdade() . PHP_EOL;
 // acesso ao método público da classe Funcionario
-$zidane->obterSalario();
+echo $zidane->obterSalario() . PHP_EOL;

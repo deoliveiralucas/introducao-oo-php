@@ -5,10 +5,9 @@ require_once 'ClienteRepositorio.php';
 require_once 'ClienteServico.php';
 
 // Verifica se existe uma requisição POST
-// caso exista, pega os dados e grava
-
 $dadosGravados = false;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // pega todos os dados enviados por POST
     $dadosFormulario = $_POST;
     $clienteServico = new ClienteServico();
     $clienteServico->gravar($dadosFormulario);

@@ -22,7 +22,7 @@ class Cliente
      * @param $nome string
      * @param $email string
      */
-    public function __construct($nome, $email)
+    public function __construct(string $nome, string $email)
     {
         $this->nome = $nome;
         $this->email = $email;

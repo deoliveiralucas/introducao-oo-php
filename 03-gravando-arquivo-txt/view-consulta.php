@@ -4,9 +4,7 @@ require_once 'Cliente.php';
 require_once 'ClienteRepositorio.php';
 require_once 'ClienteServico.php';
 
-// Verifica se existe uma requisição POST
-// caso exista, pega os dados e grava
-
+// Consulta dados de clientes
 $clienteServico = new ClienteServico();
 $clientes = $clienteServico->consultar();
 ?>

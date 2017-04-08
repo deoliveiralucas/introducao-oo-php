@@ -22,7 +22,7 @@ class Cliente
      * @param $nome string
      * @param $email string
      */
-    public function __construct($nome, $email)
+    public function __construct(string $nome, string $email)
     {
         $this->nome = $nome;
         $this->email = $email;
@@ -31,7 +31,7 @@ class Cliente
     /**
      * @return string
      */
-    public function obterNome()
+    public function obterNome(): string
     {
         return $this->nome;
     }
@@ -39,7 +39,7 @@ class Cliente
     /**
      * @return string
      */
-    public function obterEmail()
+    public function obterEmail(): string
     {
         return $this->email;
     }

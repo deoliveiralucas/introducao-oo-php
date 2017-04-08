@@ -7,7 +7,6 @@ use Unisal\Cliente\Entidade\Cliente;
 
 /**
  * Classe cliente repositório
- * Pega dados do cliente e envia para o repositorio
  *
  * @author Lucas de Oliveira <contato@deoliveiralucas.net>
  */
@@ -33,7 +32,7 @@ class ClienteServico
      * @param $dadosCliente array
      * @return Cliente
      */
-    public function gravar(array $dadosCliente)
+    public function gravar(array $dadosCliente): Cliente
     {
         $cliente = new Cliente($dadosCliente['nome'], $dadosCliente['email']);
         return $this->repositorio->gravar($cliente);
@@ -44,7 +43,7 @@ class ClienteServico
      * 
      * @return array
      */
-    public function consultar()
+    public function consultar(): array
     {
         return $this->repositorio->consultar();   
     }

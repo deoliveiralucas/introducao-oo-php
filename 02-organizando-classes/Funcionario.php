@@ -19,7 +19,7 @@ class Funcionario extends Pessoa
      * Método construtor para preencher dados
      * dessa classe e da classe pai
      */
-    public function __construct($nome, $idade, $cpf, $salario)
+    public function __construct(string $nome, int $idade, string $cpf, float $salario)
     {
         // atribui valor ao atributo da classe
         $this->salario = $salario;
@@ -28,10 +28,10 @@ class Funcionario extends Pessoa
     }
 
     /**
-     * Método público para imprimir o salário
+     * Método público para retornar o salário
      */
-    public function obterSalario()
+    public function obterSalario(): float
     {
-        echo 'Meu salário é: ' . $this->salario . PHP_EOL;
-    } 
+        return $this->salario;
+    }
 }

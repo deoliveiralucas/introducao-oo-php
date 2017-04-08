@@ -2,7 +2,7 @@
 
 // FLISoL 2017
 // Introdução a Orientação a Objetos com PHP
-// Exemplo didatico de classes, atributos e métodos
+// Exemplo de classes, atributos e métodos
 
 /**
  * Classe Pessoa
@@ -38,7 +38,7 @@ class Pessoa
      * Método construtor é executado no 
      * momento em que a classe é instanciada
      */
-    public function __construct($nome, $idade, $cpf)
+    public function __construct(string $nome, int $idade, string $cpf)
     {
         // $this é utilizado para chamar métodos e 
         // atributos da própria classe
@@ -48,11 +48,11 @@ class Pessoa
     }
 
     /**
-     * Método público para imprimir idade
+     * Método público para retornar a idade
      */
-    public function obterIdade()
+    public function obterIdade(): int
     {
-        echo 'Minha idade é: ' . $this->idade . PHP_EOL;
+        return $this->idade;
     }
 }
 
@@ -75,19 +75,20 @@ class Funcionario extends Pessoa
      * Método construtor para preencher dados
      * dessa classe e da classe pai
      */
-    public function __construct($nome, $idade, $cpf, $salario)
+    public function __construct(string $nome, int $idade, string $cpf, float $salario)
     {
+        // atribui valor ao atributo da classe
         $this->salario = $salario;
         // chama construtor da classe pai (Pessoa)
         parent::__construct($nome, $idade, $cpf);
     }
 
     /**
-     * Método público para imprimir o salário
+     * Método público para retornar o salário
      */
     public function obterSalario()
     {
-        echo 'Meu salário é: ' . $this->salario . PHP_EOL;
+        return $this->salario;
     } 
 }
 
@@ -96,7 +97,7 @@ $lucas = new Pessoa('Lucas', 22, '12345678');
 // acesso direto ao atributo público
 echo $lucas->nome . PHP_EOL;
 // acesso ao método público
-$lucas->obterIdade();
+echo $lucas->obterIdade() . PHP_EOL;
 // echo $lucas->idade; // erro ao tentar acessar atributo protegido 
 // echo $lucas->cpf; // erro ao tentar acessar atributo privado
 // $lucas->obterSalario(); // erro: método não existe na classe pessoa
@@ -106,6 +107,6 @@ $zidane = new Funcionario('Zidane', 45, '765433211', 50000);
 // acesso direto ao atributo público da classe Pessoa
 echo $zidane->nome . PHP_EOL;
 // acesso ao método público da classe Pessoa
-$zidane->obterIdade();
+echo $zidane->obterIdade() . PHP_EOL;
 // acesso ao método público da classe Funcionario
-$zidane->obterSalario();
+echo $zidane->obterSalario() . PHP_EOL;

@@ -34,7 +34,7 @@ class Pessoa
      * Método construtor é executado no 
      * momento em que a classe é instanciada
      */
-    public function __construct($nome, $idade, $cpf)
+    public function __construct(string $nome, int $idade, string $cpf)
     {
         // $this é utilizado para chamar métodos e 
         // atributos da própria classe
@@ -46,7 +46,7 @@ class Pessoa
     /**
      * Método público retorna a idade
      */
-    public function obterIdade()
+    public function obterIdade(): int
     {
         return $this->idade;
     }
