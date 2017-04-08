@@ -1,20 +1,20 @@
 # Introdução a Orientação a Objetos com PHP
 
-Minicurso [FLISoL 2017]()
+Minicurso [FLISoL 2017](http://unisal.br/eventos/flisol2017/)
 
 ## Material
 
-1. [Slides]()
+1. [Slides](https://pt.slideshare.net/deoliveiralucasnet/introduo-a-orientao-a-objetos-com-php)
 2. Exemplos
-    2.1 [Criando classes](https://github.com/deoliveiralucas/introducao-oo-php/tree/master/01-classes-atributos-metodos) 
-    2.2 [Organizando classes](https://github.com/deoliveiralucas/introducao-oo-php/tree/master/02-organizando-classes) 
-    2.3 [Gravando em arquivo texto](https://github.com/deoliveiralucas/introducao-oo-php/tree/master/03-gravando-arquivo-txt)
-    2.4 [Utilizando interface](https://github.com/deoliveiralucas/introducao-oo-php/tree/master/04-utilizando-interface)
-    2.5 [Adicionando autoload](https://github.com/deoliveiralucas/introducao-oo-php/tree/master/05-adicionando-autoload)
+  - [Criando classes](https://github.com/deoliveiralucas/introducao-oo-php/tree/master/01-classes-atributos-metodos)
+    - [Organizando classes](https://github.com/deoliveiralucas/introducao-oo-php/tree/master/02-organizando-classes)
+    - [Gravando em arquivo texto](https://github.com/deoliveiralucas/introducao-oo-php/tree/master/03-gravando-arquivo-txt)
+    - [Utilizando interface](https://github.com/deoliveiralucas/introducao-oo-php/tree/master/04-utilizando-interface)
+    - [Adicionando autoload](https://github.com/deoliveiralucas/introducao-oo-php/tree/master/05-adicionando-autoload)
 
-## Comandos usados
+## Comandos
 
-- Subir servidor local
+- Executar servidor local
 
     ```
     php -S localhost:8080 -t diretorio/
