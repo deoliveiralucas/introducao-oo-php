@@ -8,13 +8,6 @@
 class ClienteRepositorio
 {
 
-    private $caminhoArquivo;
-
-    public function __construct(string $caminhoArquivo = NULL)
-    {
-        $this->caminhoArquivo = $caminhoArquivo;
-    }
-
     /**
      * Grava dados do cliente em arquivo texto
      * 
@@ -49,7 +42,7 @@ class ClienteRepositorio
     public function consultar(): array
     {
         // verifica se existe os arquivo
-        if (!file_exists($this->caminhoArquivo)) {
+        if (!file_exists('clientes.txt')) {
             // se não existir retorna um array vazio
             return [];
         }

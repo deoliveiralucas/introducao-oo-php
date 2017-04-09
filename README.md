@@ -19,3 +19,9 @@ Minicurso [FLISoL 2017](http://unisal.br/eventos/flisol2017/)
     ```
     php -S localhost:8080 -t diretorio/
     ```
+
+- Criando arquivo de autoload
+
+    ```
+    composer dumpautoload
+    ```

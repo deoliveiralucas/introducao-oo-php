@@ -32,8 +32,8 @@ class ClienteServico
     public function consultar(): array
     {
         // cria uma nova instancia do repositorio
-        $repositorio = new ClienteRepositorio('/directory-path');
+        $repositorio = new ClienteRepositorio();
         // retorna clientes do arquivos texto
-        return $repositorio->consultar();   
+        return $repositorio->consultar();
     }
 }
